@@ -1,0 +1,26 @@
+.captcha {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.captcha__svg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+
+.captcha__svg svg {
+}
+
+.captcha__svg button {
+  background-color: #f0f0f0f0;
+  border: 1px solid #ccc;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.captcha__svg button:hover {
+  background-color: #e6e6e6;
+}

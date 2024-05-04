@@ -1,0 +1,23 @@
+.root_layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.root_layout header {
+  position: fixed;
+  flex-grow: 0;
+  height: 74px;
+}
+
+.root_layout main {
+  margin: 0 15%;
+  margin-top: 74px;
+  flex-grow: 1;
+}
+
+.root_layout footer {
+  flex-grow: 0;
+}
+

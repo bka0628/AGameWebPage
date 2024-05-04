@@ -1,0 +1,35 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.NewsListItem {
+  list-style: none;
+  display: flex;
+  border-bottom: 2px solid silver;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.NewsListItem__type {
+  width: 5rem;
+  text-align: center;
+}
+
+.NewsListItem__title {
+  width: 70%;
+}
+
+.NewsListItem__date {
+  width: 5.5rem;
+  text-align: center;
+}
+
+.NewsListItem:hover, .NewsListItem:active, .NewsListItem:focus{
+  background-color: rgba(193, 193, 193, 0.1);
+}
+
+.NewsListItem p {
+  margin: 0;
+  padding: 0;
+}

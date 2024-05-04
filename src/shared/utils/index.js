@@ -1,0 +1,1 @@
+export { getTokenDuration } from './token';

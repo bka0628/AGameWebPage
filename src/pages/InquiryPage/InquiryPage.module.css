@@ -1,0 +1,93 @@
+.inquiry {
+  padding: 30px 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inquiry__select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.inquiry__select label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.inquiry__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  margin: 10px 0;
+}
+
+.inquiry__content label {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.inquiry__content textarea {
+  font-size: 1.1rem;
+  width: 90%;
+  height: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inquiry__select select {
+  width: 90%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inquiry__input {
+  width: 90%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inquiry__input select {
+  width: 90%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inquiry__button {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inquiry__button button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 5rem;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.inquiry__button button:hover {
+  background-color: blue;
+  border: 1px solid blue;
+}
+
+.error {
+  text-align: center;
+  color: red;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+

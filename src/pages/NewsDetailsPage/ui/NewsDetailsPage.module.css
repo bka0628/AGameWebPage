@@ -1,0 +1,15 @@
+.news-detail__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: rgba(193, 193, 193, 0.2);
+  padding: 15px 27px;
+}
+
+.news-detail__content {
+  padding: 27px;
+  border-bottom: 1px solid black;
+  margin-bottom: 100px;
+}

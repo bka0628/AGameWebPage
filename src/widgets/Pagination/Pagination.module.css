@@ -1,0 +1,29 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination__numbers {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination__numbers li {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.pagination__numbers li:active,
+.pagination__numbers li:hover {
+  color: blue;
+  font-weight: bold;
+}
+
+.active {
+  font-weight: bold;
+  color: blue !important;
+  cursor: default !important;
+}
