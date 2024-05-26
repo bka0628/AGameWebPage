@@ -1,6 +1,6 @@
 import { getTokenDuration } from '../../../../shared/index';
 
-const RootLayoutLoader = () => {
+const rootLayoutLoader = () => {
   const tokenDuration = getTokenDuration();
 
   const token = localStorage.getItem('token');
@@ -16,4 +16,4 @@ const RootLayoutLoader = () => {
   return token;
 };
 
-export default RootLayoutLoader;
+export default rootLayoutLoader;

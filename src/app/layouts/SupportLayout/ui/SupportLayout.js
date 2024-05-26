@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
-import { PageTitle } from '../../../shared/index';
-import { SupportNavbar } from '../../../widgets/index';
+import { PageTitle } from '../../../../shared/index';
+import { SupportNavbar } from '../../../../widgets/index';
 
 const SupportPage = () => {
   return (

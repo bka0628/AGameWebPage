@@ -1,12 +1,10 @@
 export { default as HomePage } from './HomePage/HomePage';
-export { default as NewsAllPage } from './NewsAllPage/NewsAllPage';
-export { default as NewsMaintenancePage } from './NewsMaintenancePage/NewsMaintenancePage';
-export { default as NewsNoticesPage } from './NewsNoticesPage/NewsNoticesPage';
-export { default as NewsUpdatesPage } from './NewsUpdatesPage/NewsUpdatesPage';
-export { NewsDetailPage, newsDetailsLoader  } from './NewsDetailsPage/index';
-export { default as DownloadPage } from './DownloadPage/DownloadPage';
-export { default as LoginPage } from './LoginPage/LoginPage';
+export { NewsPage } from './NewsPage/index';
+export { NewsDetailPage } from './NewsDetailsPage/index';
+export { DownloadPage, downloadPageLoader } from './DownloadPage/index';
+export { LoginPage, loginPageLoader } from './LoginPage/index';
 export { default as SignupPage } from './SignupPage/SignupPage';
 export { default as InquiryPage } from './InquiryPage/InquiryPage';
-export { default as InquiriesPage } from './InquiriesPage/InquiriesPage';
+export { InquiriesPage, inquiriesPageLoader } from './InquiriesPage/index';
+export { InquiriesDetailPage, inquiriesDetailsLoader } from './InquiriesDetailsPage/index';
 export { default as ErrorPage } from './ErrorPage/ErrorPage';

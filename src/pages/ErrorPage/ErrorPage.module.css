@@ -1,0 +1,23 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error-page__title {
+  margin-bottom: 20px;
+}
+
+.error-page__description {
+  margin-bottom: 60px;
+}
+
+.error-page a {
+  color: blue;
+  font-size: 1.2rem;
+  text-decoration: none;
+}

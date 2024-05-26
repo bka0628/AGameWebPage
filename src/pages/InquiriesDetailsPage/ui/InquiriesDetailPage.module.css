@@ -1,30 +1,28 @@
-.news-detail__header {
+.inquiries-detail__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid silver;
   background-color: rgba(193, 193, 193, 0.2);
   padding: 15px 27px;
 }
 
 .news-detail__content {
-  padding: 27px;
+  padding: 60px;
   border-bottom: 1px solid silver;
 }
 
-.news-detail__footer {
-  display: flex;
-  flex-direction: column;
-}
-
-.news-detail__footer__item {
+.inquiry-Answers-detail__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: rgba(34, 34, 34, 0.674);
   padding: 15px 27px;
-  border-bottom: 1px solid silver;
+  color: white;
 }
 
-.news-detail__footer__item:hover {
+.inquiry-Answers-detail__content {
+  padding: 60px;
+  border-bottom: 1px solid silver;
   background-color: rgba(193, 193, 193, 0.2);
 }

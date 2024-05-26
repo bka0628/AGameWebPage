@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useLoaderData } from 'react-router-dom';
-import { Captcha } from '../../entities';
-import { API_URL } from '../../app/globals';
+import { Captcha } from '../../../entities';
+import { API_URL } from '../../../app/globals';
 
 import classes from './LoginPage.module.css';
 

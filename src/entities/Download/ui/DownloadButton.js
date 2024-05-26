@@ -1,10 +1,6 @@
-import { detectOS, getDownloadUrl } from '../lib/osDetection';
 import classes from './DownloadButton.module.css';
 
-const DownloadButton = () => {
-  const os = detectOS();
-  const fileUrl = getDownloadUrl(os);
-
+const DownloadButton = ({ fileUrl, os }) => {
   if (!fileUrl) {
     return (
       <>
@@ -24,6 +20,6 @@ const DownloadButton = () => {
       </div>
     </>
   );
-}
+};
 
 export default DownloadButton;

@@ -1,0 +1,22 @@
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid silver;
+}
+
+.search button {
+  padding: 10px 20px;
+  border: 1px solid silver;
+  background-color: white;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: lightgray;
+}

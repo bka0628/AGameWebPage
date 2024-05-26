@@ -1,0 +1,37 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.inquiries-list-Item {
+  list-style: none;
+  display: flex;
+  border-bottom: 2px solid silver;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.inquiries-list-Item__type {
+  width: 5rem;
+  text-align: center;
+}
+
+.inquiries-list-Item__title {
+  width: 70%;
+}
+
+.inquiries-list-Item__date {
+  width: 5.5rem;
+  text-align: center;
+}
+
+.inquiries-list-Item:hover,
+.inquiries-list-Item:active,
+.inquiries-list-Item:focus {
+  background-color: rgba(193, 193, 193, 0.1);
+}
+
+.inquiries-list-Item p {
+  margin: 0;
+  padding: 0;
+}

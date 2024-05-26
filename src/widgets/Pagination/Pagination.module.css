@@ -4,6 +4,11 @@
   margin-top: 20px;
 }
 
+.pagination button {
+  margin: 0 2px;
+  cursor: pointer;
+}
+
 .pagination__numbers {
   display: flex;
   list-style: none;

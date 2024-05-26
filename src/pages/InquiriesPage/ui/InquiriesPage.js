@@ -1,24 +1,30 @@
 import { useEffect, useState } from 'react';
-import { Link, useRouteLoaderData } from 'react-router-dom';
+import { useRouteLoaderData, useLoaderData } from 'react-router-dom';
 
-import classes from './InquiriesPage.module.css';
-import { NewsList, NewsListItem } from '../../entities/index';
-import { API_URL } from '../../app/globals';
+import { Pagination } from '../../../widgets/index';
+
+import { InquiriesList, InquiriesListItem } from '../../../entities/index';
+import { API_URL } from '../../../app/globals';
 
 const InquiresPage = () => {
-  const token = useRouteLoaderData('root');
-  const userId = localStorage.getItem('userId');
-
+  const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState();
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(false);
+
+  const token = useRouteLoaderData('root');
+  const InquiresCount = useLoaderData();
+
+  const pageChangeHandler = (page) => {
+    setCurrentPage(page);
+  };
 
   useEffect(() => {
     async function fetchEvents() {
       setIsLoading(true);
 
       const response = await fetch(
-        API_URL + '/support/inquiries',
+        `${API_URL}/support/inquiries?page=${currentPage}`,
         {
           headers: {
             Authorization: 'Bearer ' + token,
@@ -48,24 +54,29 @@ const InquiresPage = () => {
       .finally(() => {
         setIsLoading(false);
       });
-  }, []);
+  }, [token, currentPage]);
 
   return (
     <>
       {token && (
-        <NewsList>
+        <InquiriesList>
           {data?.map((inquiries, index) => (
-            <NewsListItem
+            <InquiriesListItem
               key={inquiries.id}
               id={inquiries.id}
-              title={inquiries.content}
+              content={inquiries.content}
               date={inquiries.date}
               type={inquiries.type}
             />
           ))}
-        </NewsList>
+        </InquiriesList>
       )}
       {!token && <p>문의내역을 확인 하려면 로그인이 필요합니다.</p>}
+      <Pagination
+        currentPage={currentPage}
+        totalItemsCount={InquiresCount}
+        onChangePage={pageChangeHandler}
+      />
     </>
   );
 };

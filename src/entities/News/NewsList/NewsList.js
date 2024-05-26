@@ -5,3 +5,4 @@ const NewsList = ({ children }) => {
 };
 
 export default NewsList;
+
