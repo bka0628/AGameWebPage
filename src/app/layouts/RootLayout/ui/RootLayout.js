@@ -2,16 +2,15 @@ import { Outlet, useLoaderData } from 'react-router-dom';
 
 import { Header } from '../../../../widgets/index';
 import useTokenValidation from '../model/useTokenValidation';
-import classes from './RootLayout.module.css';
 
 const RootLayout = () => {
   const token = useLoaderData();
   useTokenValidation(token);
 
   return (
-    <div className={classes['root_layout']}>
+    <div className="flex flex-col w-full h-full ">
       <Header />
-      <main>
+      <main className="w-3/4 m-auto mt-16">
         <Outlet />
       </main>
       <footer>

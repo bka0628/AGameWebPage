@@ -16,6 +16,26 @@
   font-weight: bold;
 }
 
+.inquiry__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.inquiry__title label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.inquiry__title input {
+  font-size: 1.1rem;
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 .inquiry__content {
   display: flex;
   justify-content: space-between;

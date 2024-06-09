@@ -12,7 +12,7 @@ const NewsListItem = ({ id, title, date, type }) => {
           <p>{type}</p>
         </div>
         <div className={classes['NewsListItem__title']}>
-          <p>{title}</p>
+          <p className='line-clamp-1'>{title}</p>
         </div>
         <div className={classes['NewsListItem__date']}>
           <p>{date}</p>

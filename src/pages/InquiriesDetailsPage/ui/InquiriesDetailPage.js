@@ -2,6 +2,8 @@ import { SupportNavbar } from '../../../widgets';
 import classes from './InquiriesDetailPage.module.css';
 
 const InquiriesDetailPage = () => {
+  
+
   return (
     <>
       <SupportNavbar />

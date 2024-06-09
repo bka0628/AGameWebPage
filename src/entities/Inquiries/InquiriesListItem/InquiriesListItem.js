@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import classes from './InquiriesListItem.module.css';
 
-const InquiriesListItem = ({ id, content, date, type }) => {
+const InquiriesListItem = ({ id, date, type, status, title }) => {
   const { pathname } = useLocation();
 
   return (
@@ -11,10 +11,13 @@ const InquiriesListItem = ({ id, content, date, type }) => {
           <p>{type}</p>
         </div>
         <div className={classes['inquiries-list-Item__title']}>
-          <p>{content}</p>
+          <p>{title}</p>
         </div>
         <div className={classes['inquiries-list-Item__date']}>
           <p>{date}</p>
+        </div>
+        <div className={classes['inquiries-list-Item__date']}>
+          <p>{status}</p>
         </div>
       </li>
     </Link>

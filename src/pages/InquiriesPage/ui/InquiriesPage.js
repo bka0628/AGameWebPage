@@ -64,9 +64,10 @@ const InquiresPage = () => {
             <InquiriesListItem
               key={inquiries.id}
               id={inquiries.id}
-              content={inquiries.content}
-              date={inquiries.date}
               type={inquiries.type}
+              title={inquiries.title}
+              date={inquiries.date}
+              status={inquiries.status}
             />
           ))}
         </InquiriesList>

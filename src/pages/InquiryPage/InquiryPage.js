@@ -6,6 +6,7 @@ import { API_URL } from '../../app/globals';
 
 const InquiryPage = () => {
   const [inquiryType, setInquiryType] = useState('');
+  const [inquiryTitle, setInquiryTitle] = useState('');
   const [inquiryContent, setInquiryContent] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -17,6 +18,10 @@ const InquiryPage = () => {
 
     if (!inquiryType || inquiryType === '') {
       setError('문의 유형을 선택해 주세요.');
+      return;
+    }
+    if (!inquiryTitle) {
+      setError('문의 제목을 입력해 주세요.');
       return;
     }
     if (!inquiryContent) {
@@ -32,7 +37,7 @@ const InquiryPage = () => {
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + token,
       },
-      body: JSON.stringify({ inquiryType, inquiryContent }),
+      body: JSON.stringify({ inquiryType, inquiryTitle, inquiryContent }),
     }).catch((error) => {
       console.error('문의하기 요청 중에 오류가 발생했습니다:', error);
     });
@@ -49,7 +54,7 @@ const InquiryPage = () => {
         <>
           <form className={classes.inquiry} onSubmit={handleFormSubmit}>
             <div className={classes.inquiry__select}>
-              <label>문의유형</label>
+              <label>문의 유형</label>
               <select
                 value={inquiryType}
                 onChange={(e) => setInquiryType(e.target.value)}
@@ -63,8 +68,17 @@ const InquiryPage = () => {
                 <option value="기타">기타</option>
               </select>
             </div>
+            <div className={classes.inquiry__title}>
+              <label>문의 제목</label>
+              <input
+                type="text"
+                placeholder="제목을 입력해주세요"
+                value={inquiryTitle}
+                onChange={(e) => setInquiryTitle(e.target.value)}
+              />
+            </div>
             <div className={classes.inquiry__content}>
-              <label>문의내용</label>
+              <label>문의 내용</label>
               <textarea
                 placeholder="내용을 입력해주세요"
                 value={inquiryContent}
