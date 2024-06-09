@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import classes from './SignupPage.module.css';
 import { Captcha } from '../../entities';
 import { API_URL } from '../../app/globals';
 
@@ -73,11 +72,15 @@ const SignupPage = () => {
 
   return (
     <>
-      <form className={classes.signup__from} onSubmit={handleFormSubmit}>
+      <form
+        className="flex flex-col w-full h-full gap-3 "
+        onSubmit={handleFormSubmit}
+      >
         <input
           type="text"
           placeholder="아이디"
           value={id}
+          className="w-full px-3 border border-gray-300 rounded-md h-11 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500"
           onChange={(e) => {
             setId(e.target.value);
           }}
@@ -86,6 +89,7 @@ const SignupPage = () => {
           type="password"
           placeholder="비밀번호"
           value={password}
+          className="w-full px-3 border border-gray-300 rounded-md h-11 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500"
           onChange={(e) => {
             setPassword(e.target.value);
           }}
@@ -94,24 +98,31 @@ const SignupPage = () => {
           type="password"
           placeholder="비밀번호 확인"
           value={passwordConfirm}
+          className="w-full px-3 border border-gray-300 rounded-md h-11 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500"
           onChange={(e) => {
             setPasswordConfirm(e.target.value);
           }}
         />
-        <Captcha onChange={
-          (value) => {
+        <Captcha
+          onChange={(value) => {
             setCaptcha(value);
-          }
-        }/>
+          }}
+        />
         <input
-            type="text"
-            placeholder="자동 입력 방지 문자"
-            onChange={(e) => {
-              setCaptcha(e.target.value);
-            }}
-          />
-        {error && <p>{error}</p>}
-        <button className={classes.signup__from__button} type="submit">회원가입</button>
+          type="text"
+          placeholder="자동 입력 방지 문자"
+          className="w-full px-3 border border-gray-300 rounded-md h-11 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500"
+          onChange={(e) => {
+            setCaptcha(e.target.value);
+          }}
+        />
+        {error && <p className="font-bold text-red-500 ">{error}</p>}
+        <button
+          className="w-full text-xl font-bold text-white bg-black rounded-md h-11 hover:bg-blue-700"
+          type="submit"
+        >
+          회원가입
+        </button>
       </form>
     </>
   );

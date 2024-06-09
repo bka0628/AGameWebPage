@@ -10,7 +10,7 @@ const RootLayout = () => {
   return (
     <div className="flex flex-col w-full h-full ">
       <Header />
-      <main className="w-3/4 m-auto mt-16">
+      <main className="w-3/4 m-auto mt-16 max-md:w-full max-md:px-5">
         <Outlet />
       </main>
       <footer>

@@ -3,8 +3,6 @@ import { useNavigate, useLoaderData } from 'react-router-dom';
 import { Captcha } from '../../../entities';
 import { API_URL } from '../../../app/globals';
 
-import classes from './LoginPage.module.css';
-
 const LoginPage = () => {
   const navigate = useNavigate();
   const loaderData = useLoaderData();
@@ -14,6 +12,8 @@ const LoginPage = () => {
   const [error, setError] = useState('');
   const [isCaptcha, setIsCaptcha] = useState(loaderData);
   const [captcha, setCaptcha] = useState('');
+
+  console.log('isCaptcha:', isCaptcha);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -83,11 +83,15 @@ const LoginPage = () => {
 
   return (
     <>
-      <form className={classes.login__from} onSubmit={handleFormSubmit}>
+      <form
+        className="flex flex-col w-full h-full gap-3 "
+        onSubmit={handleFormSubmit}
+      >
         <input
           type="text"
           placeholder="아이디"
           value={id}
+          className="w-full px-3 border border-gray-300 rounded-md h-11 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500"
           onChange={(e) => {
             setId(e.target.value);
           }}
@@ -96,6 +100,7 @@ const LoginPage = () => {
           type="password"
           placeholder="비밀번호"
           value={password}
+          className="w-full px-3 border border-gray-300 rounded-md h-11 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500"
           onChange={(e) => {
             setPassword(e.target.value);
           }}
@@ -106,14 +111,15 @@ const LoginPage = () => {
             <input
               type="text"
               placeholder="자동 입력 방지 문자"
+              className='w-full px-3 border border-gray-300 rounded-md h-11 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500'
               onChange={(e) => {
                 setCaptcha(e.target.value);
               }}
             />
           </>
         )}
-        {error && <p>{error}</p>}
-        <button className={classes.login__from__button} type="submit">
+        {error && <p className='font-bold text-red-500 '>{error}</p>}
+        <button className="w-full text-xl font-bold text-white bg-black rounded-md h-11 hover:bg-blue-700" type="submit">
           로그인
         </button>
       </form>
